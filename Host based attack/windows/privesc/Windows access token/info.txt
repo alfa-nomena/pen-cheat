@@ -1,0 +1,13 @@
+- Delegation token : 
+    - direct result of interactive logon
+- impersonation token :
+    - result of non interactive logon
+
+- prerequisite : 
+    - one of the following 
+        - SeAssingPrimaryToken
+        - SeCreateToken
+        - SeImpersonatePrivilege
+    - A meterpreter shell
+        - Incognito module built-in meterpreter
+        

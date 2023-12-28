@@ -1,0 +1,3 @@
+- Hide any malicious data inside the ressource stream of a legitimate data stream
+- used to evade anti virus and any signature source 
+- 

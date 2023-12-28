@@ -1,0 +1,17 @@
+- exploiting privilege to another user (NT SYSTEM/ROOT)
+- kernel : 
+    - core of OS
+    - program that control over every resource and hardware on system
+- windows kernel : 
+    - Windows NT
+    - Kernel Mode : Unrestricted access to system
+    - User mode : limited access and functionnality
+
+- Exploitation : 
+    - identifying kernel vulnerability
+    - Downloading, compiling and transfering exploit
+
+- Tools : 
+    - windows exploit suggester : https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+    - windows kernel exploits : https://github.com/SecWiki/windows-kernel-exploits
+    
