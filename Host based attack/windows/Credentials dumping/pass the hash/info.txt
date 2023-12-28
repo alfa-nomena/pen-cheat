@@ -1,0 +1,4 @@
+- tools used : 
+    - metasploit psexec module
+    - crackmapexec
+- use hash to maintain access to the system even if the first vulnerability is patched or disabled.

