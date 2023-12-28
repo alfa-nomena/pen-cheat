@@ -1,0 +1,5 @@
+- mimikatz dumps hashed from lsass.exe
+- executable : 
+    - precompiled in kali/parrot
+    - built-in module named kiwi in meterpreter
+- Need Privileged session

@@ -1,0 +1,6 @@
+- unattended configutation files is used to store configutation to install windows with a specific configuration to many machine
+- these files, sometimes is left over by system administrators 
+- path of these files : 
+    - C:\Windows\Panther\Unattend.xml
+    - C:\Windows\Panther\Autounattend.xml
+- Password stored in this file may be encoded in base64

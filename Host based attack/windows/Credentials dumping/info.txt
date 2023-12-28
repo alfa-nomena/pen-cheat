@@ -1,0 +1,6 @@
+- windows hashed is stored in the SAM database
+- the sam database cannot copyed when the operating system is running
+- Attacker uses in memory technics to dump these databases
+- Privileged session is necessary to dump hashes
+- Windows version from windows 2003 uses the NTLM hashes
+- NTLM hashes is case sensitive, uses symbols and hashed with the MD4 algorithms without using salts
